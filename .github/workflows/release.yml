@@ -16,6 +16,10 @@ jobs:
       - run: ./gradlew :plugin:buildPluginDex
       - run: |
           cp plugin/build/plugin-dex/classes.dex timetable-core.dex
-          gh release create "$GITHUB_REF_NAME" timetable-core.dex --title "$GITHUB_REF_NAME" --generate-notes
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" timetable-core.dex --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" timetable-core.dex --title "$GITHUB_REF_NAME" --generate-notes
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
