@@ -1,0 +1,8 @@
+{
+  "id": "com.stupidtree.hitax.timetable",
+  "name": "课表核心",
+  "version": "0.1.0",
+  "entryClass": "com.stupidtree.hitax.plugin.TimetableCorePlugin",
+  "apiVersion": 10,
+  "provides": ["hita.timetable"]
+}
