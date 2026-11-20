@@ -3,6 +3,6 @@
   "name": "课表核心",
   "version": "0.1.0",
   "entryClass": "com.stupidtree.hitax.plugin.TimetableCorePlugin",
-  "apiVersion": 10,
+  "apiVersion": 11,
   "provides": ["hita.timetable"]
 }

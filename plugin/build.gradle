@@ -12,7 +12,7 @@ android {
     kotlinOptions { jvmTarget = '1.8' }
 }
 dependencies {
-    compileOnly 'io.github.kajimi16.ohmyhita:plugin-sdk:10.1'
+    compileOnly 'io.github.kajimi16.ohmyhita:plugin-sdk:11'
     compileOnly 'androidx.room:room-runtime:2.6.1'
     compileOnly 'androidx.lifecycle:lifecycle-livedata-core:2.8.4'
     compileOnly 'org.mnode.ical4j:ical4j:1.0.2'
