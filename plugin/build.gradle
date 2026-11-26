@@ -12,12 +12,20 @@ android {
     kotlinOptions { jvmTarget = '1.8' }
 }
 dependencies {
-    compileOnly 'io.github.kajimi16.ohmyhita:plugin-sdk:11'
-    compileOnly 'androidx.room:room-runtime:2.6.1'
+    compileOnly 'io.github.kajimi16.ohmyhita:plugin-sdk:14'
+    compileOnly 'androidx.room:room-runtime:2.8.4'
     compileOnly 'androidx.lifecycle:lifecycle-livedata-core:2.8.4'
     compileOnly 'org.mnode.ical4j:ical4j:1.0.2'
     compileOnly 'com.google.code.gson:gson:2.8.9'
-    kapt 'androidx.room:room-compiler:2.6.1'
+    kapt 'androidx.room:room-compiler:2.8.4'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.14.1'
+    testImplementation 'androidx.test:core:1.6.1'
+    // compileOnly 的 Room 不进测试运行时；测试用同版本真实实现。
+    testImplementation 'androidx.room:room-runtime:2.8.4'
+    // compileOnly 的契约类不进测试类路径；测试需要真实模型与 Gson 运行时。
+    testImplementation 'io.github.kajimi16.ohmyhita:plugin-sdk:14'
 }
 
 def sdkDir = {

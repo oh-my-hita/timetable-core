@@ -1,8 +1,8 @@
 {
   "id": "com.stupidtree.hitax.timetable",
   "name": "课表核心",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "entryClass": "com.stupidtree.hitax.plugin.TimetableCorePlugin",
-  "apiVersion": 11,
-  "provides": ["hita.timetable"]
+  "apiVersion": 14,
+  "provides": ["hita.timetable", "hita.timetable.provider"]
 }
